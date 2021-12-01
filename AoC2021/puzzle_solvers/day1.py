@@ -1,10 +1,9 @@
-from input.input_parser import InputParser
-from input.puzzle_x_file import PuzzleXFile
+from input.input_parser import InputParser, InputTypes
+from shared.sonar_sweep import SonarSweep
 
 
 class Day1:
     def solve(self):
-        file = InputParser.get_input(PuzzleXFile.Day1a)
-
-        for string in file:
-            print(string)
+        list = InputParser.get_input('day1', InputTypes.List)
+        sweeper = SonarSweep([int(i) for i in list])
+        return sweeper.getElevationMapPositiveCount()
