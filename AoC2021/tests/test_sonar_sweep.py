@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from shared.sonar_sweep import SonarSweep
+from shared.submarine_sonar import SonarSweep
 
 
 class TestSonarSweep(TestCase):
@@ -10,7 +10,7 @@ class TestSonarSweep(TestCase):
         self.sonar_sweep = SonarSweep(self.data)
 
     def test_sonar_sweep_get_measurement_sliding_window_1(self):
-        self.assertEqual(self.sonar_sweep.getMeasurementSlidingWindow(1), 7)
+        self.assertEqual(self.sonar_sweep.get_measurement_sliding_window(1), 7)
 
     def test_sonar_sweep_get_measurement_sliding_window_3(self):
-        self.assertEqual(self.sonar_sweep.getMeasurementSlidingWindow(3), 5)
+        self.assertEqual(self.sonar_sweep.get_measurement_sliding_window(3), 5)

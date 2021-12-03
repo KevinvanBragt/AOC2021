@@ -9,7 +9,6 @@ class Day3:
         self.sub = SubmarineDiagnostics(self.data)
 
     def solve(self):
-        rates = self.sub.get_life_support_ratings()
-        o2 = int(rates["o"], 2)
-        co2 = int(rates["co2"], 2)
+        o2 = int(self.sub.o2_rating, 2)
+        co2 = int(self.sub.co2_rating, 2)
         return o2 * co2

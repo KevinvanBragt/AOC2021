@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from shared.position import Position
+from shared.submarine_position import Position
 
 
 class TestPosition(TestCase):

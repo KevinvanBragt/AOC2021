@@ -1,5 +1,5 @@
 from input.input_parser import Puzzle, InputParser, OutputTypes
-from shared.position import Position
+from shared.submarine_position import Position
 
 
 class Day2:
