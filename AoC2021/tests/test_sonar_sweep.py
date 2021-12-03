@@ -10,7 +10,7 @@ class TestSonarSweep(TestCase):
         self.sonar_sweep = SonarSweep(self.data)
 
     def test_sonar_sweep_get_measurement_sliding_window_1(self):
-        self.assertEqual(7, self.sonar_sweep.getMeasurementSlidingWindow(1))
+        self.assertEqual(self.sonar_sweep.getMeasurementSlidingWindow(1), 7)
 
     def test_sonar_sweep_get_measurement_sliding_window_3(self):
-        self.assertEqual(5, self.sonar_sweep.getMeasurementSlidingWindow(3))
+        self.assertEqual(self.sonar_sweep.getMeasurementSlidingWindow(3), 5)
