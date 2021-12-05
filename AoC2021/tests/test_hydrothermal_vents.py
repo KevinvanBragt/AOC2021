@@ -11,4 +11,4 @@ class TestHydrothermalVents(TestCase):
         self.htv = HydroThermalVents(self.data, 10)
 
     def test_htv(self):
-        self.assertEqual(5, self.htv.count())
+        self.assertEqual(12, self.htv.count())
