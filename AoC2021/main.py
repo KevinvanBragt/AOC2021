@@ -5,10 +5,11 @@
 from puzzle_solvers.day2 import Day2
 from puzzle_solvers.day3 import Day3
 from puzzle_solvers.day4 import Day4
+from puzzle_solvers.day5 import Day5
 
 
 def solve_puzzle():
-    print(Day4().solve())
+    print(Day5().solve())
 
 
 if __name__ == '__main__':

@@ -1,4 +1,3 @@
-import sys
 from enum import Enum
 
 
@@ -15,8 +14,7 @@ class OutputTypes(Enum):
 class InputParser:
     @staticmethod
     def get_input(data: str, output_type: OutputTypes = None):
-        print(sys.path[1])
-        with open(f"{sys.path[1]}\input\data\{data}") as file:
+        with open(f"C:\\Users\\kevin\\PycharmProjects\\AoC2021\\input\\data\\{data}") as file:
             if output_type is None or output_type is OutputTypes.File:
                 return file.read()
             elif output_type is OutputTypes.List:
