@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from shared.submarine_sonar import SonarSweep
+from shared.submarine.submarine_sonar import SonarSweep
 
 
 class TestSonarSweep(TestCase):

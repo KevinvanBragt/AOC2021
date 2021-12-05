@@ -1,7 +1,6 @@
 from unittest import TestCase
 
-from input.input_parser import InputParser, OutputTypes
-from shared.submarine_diagnostics import SubmarineDiagnostics
+from shared.submarine.submarine_diagnostics import SubmarineDiagnostics
 
 
 class TestSubmarineDiagnostics(TestCase):

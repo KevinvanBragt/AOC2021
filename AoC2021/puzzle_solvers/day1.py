@@ -1,5 +1,5 @@
 from input.input_parser import InputParser, OutputTypes
-from shared.submarine_sonar import SonarSweep
+from shared.submarine.submarine_sonar import SonarSweep
 
 
 class Day1:
