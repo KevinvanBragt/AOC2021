@@ -16,7 +16,6 @@ class BingoBoard:
             for col in range(0, 5):
                 if self.data[row][col] == number:
                     self.data[row][col] = None
-                    print('crossing nr ', number, ' data=', self.data)
                     self.check_is_winner(row, col)
 
     def check_is_winner(self, row, col):

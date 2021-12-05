@@ -14,13 +14,22 @@ class BingoGameMaster:
             i += 5
 
     def run(self) -> int:
-        winner = None
-        while winner is None:
+        nr_of_boards = len(self.boards)
+        number_drawn = -1;
+        while nr_of_boards > 1:
             number_drawn = self.number_generator.draw_number()
             for board in self.boards:
                 board.cross_if_exists(number_drawn)
-                if board.has_bingo:
-                    return self.get_puzzle_output(board, number_drawn)
+            self.boards = list(filter(lambda b: b.has_bingo is False, self.boards))
+            nr_of_boards = len(self.boards)
+
+        board = self.boards[0]
+        while not board.has_bingo:
+            number_drawn = self.number_generator.draw_number()
+            board.cross_if_exists(number_drawn)
+
+        return self.get_puzzle_output(board, number_drawn)
+
 
     def get_puzzle_output(self, board: BingoBoard, number_drawn) -> int:
         return board.sum_remaining() * number_drawn

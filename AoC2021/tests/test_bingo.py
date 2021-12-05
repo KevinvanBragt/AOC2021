@@ -13,4 +13,4 @@ class TestBingo(TestCase):
     def test_bingo_setup(self):
         output = self.bingo_game.run()
 
-        self.assertEqual(4512, output)
+        self.assertEqual(1924, output)
