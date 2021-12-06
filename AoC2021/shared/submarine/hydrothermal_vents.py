@@ -18,15 +18,10 @@ class HydroThermalVents:
             for y in range(min(start_y, end_y), max(start_y, end_y) + 1):
                 self.map[y][start_x] += 1
         else:
-            step_x = 1 if end_x > start_x else -1
-            step_y = 1 if end_y > start_y else -1
-            x = start_x
-            y = start_y
-            while x != end_x:
-                self.map[y][x] += 1
-                x += step_x
-                y += step_y
-            self.map[y][x] += 1
+            range_x = range(start_x, end_x - 1, -1) if start_x > end_x else range(start_x, end_x + 1)
+            range_y = range(start_y, end_y - 1, -1) if start_y > end_y else range(start_y, end_y + 1)
+            for i, j in zip(range_y, range_x):
+                self.map[i][j] += 1
 
     def print_map(self):
         print('map')
