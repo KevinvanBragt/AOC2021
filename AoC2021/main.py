@@ -4,10 +4,11 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 from puzzle_solvers.Day7 import Day7
 from puzzle_solvers.day6 import Day6
+from puzzle_solvers.day8 import Day8
 
 
 def solve_puzzle():
-    Day7.solve()
+    print(Day8.solve())
 
 
 if __name__ == '__main__':

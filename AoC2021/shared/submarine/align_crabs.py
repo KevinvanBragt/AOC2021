@@ -1,4 +1,5 @@
 import functools
+from statistics import mean
 
 
 class AlignCrabs:
@@ -18,7 +19,5 @@ class AlignCrabs:
             if current_sum < least_sum:
                 least_sum = current_sum
                 position = i
-                print('found better position: position=', position, ' distance=', least_sum)
-            print('found position: position=', position, ' distance=', current_sum)
 
         return position, least_sum
